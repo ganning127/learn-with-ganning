@@ -26,6 +26,8 @@ export default function Home() {
             </Text>
             , a program we&apos;ll be hosting in Summer 2023 offering
             programming courses in ranging from Web Development to Research.
+            This website is currently under contstruction, but feel free to
+            check back later!
           </Text>
 
           <Button
