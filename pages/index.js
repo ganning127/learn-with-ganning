@@ -41,7 +41,7 @@ export default function Home() {
               transform: "scale(1.05)",
             }}
           >
-            Learn More
+            Learn more
           </Button>
           <Button
             as="a"
