@@ -25,9 +25,9 @@ export default function Home() {
               Learn With Ganning
             </Text>
             , a program we&apos;ll be hosting in Summer 2023 offering
-            programming courses in ranging from Web Development to Research.
-            This website is currently under contstruction, but feel free to
-            check back later!
+            programming courses in Web Development, Python, and Research. This
+            website is currently under contstruction, but feel free to check
+            back later!
           </Text>
 
           <Button
