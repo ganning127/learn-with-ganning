@@ -6,12 +6,25 @@ import { MDXProvider } from "@mdx-js/react";
 import MDXComponents from "../components/MDXComponents";
 import { useColorMode } from "@chakra-ui/react";
 import { Global, css } from "@emotion/react";
+import { useEffect } from "react";
 import "@fontsource/open-sans/300.css";
 import "@fontsource/open-sans/400.css";
 import "@fontsource/open-sans/500.css";
 import "@fontsource/open-sans/600.css";
 import "@fontsource/open-sans/700.css";
 import "@fontsource/open-sans/800.css";
+
+function ForceLightMode({ children }) {
+  // force light mode b/c of ChakraUI bug
+  const { colorMode, toggleColorMode } = useColorMode();
+
+  useEffect(() => {
+    if (colorMode === "light") return;
+    toggleColorMode();
+  }, [colorMode]);
+
+  return children;
+}
 
 const theme = extendTheme({
   fonts: {
@@ -76,7 +89,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
       <GlobalStyle>
-        <Component {...pageProps} />
+        <ForceLightMode>
+          <Component {...pageProps} />
+        </ForceLightMode>
       </GlobalStyle>
     </ChakraProvider>
   );
