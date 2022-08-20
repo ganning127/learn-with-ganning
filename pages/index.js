@@ -52,7 +52,7 @@ export default function Home() {
             </Text>
             , a program I&apos;ll be hosting in Summer 2023 offering programming
             courses in Web Development, Python, and Research. This website is
-            currently under contstruction, but feel free to check back later!
+            currently under construction, but feel free to check back later!
           </Text>
 
           <Button
